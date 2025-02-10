@@ -1,0 +1,36 @@
+/* Apply a background image to the body */
+body {
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for the login form and image */
+.login-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Container for the login form and image */
+.login-form-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image styling with border radius */
+.login-image {
+    border-top-left-radius: 10px;
+}
+
+@media (max-width: 980px) {
+    .login-form-container .col-md-6 {
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .rows{
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 40px;
+    }
+}

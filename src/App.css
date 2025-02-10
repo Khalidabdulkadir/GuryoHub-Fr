@@ -1,0 +1,24 @@
+/* App.css */
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 200px; /* Default width of the expanded sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease; /* Smooth transition for margin */
+}
+
+/* When the sidebar is collapsed */
+.sidebar.collapsed + .main-content {
+  margin-left: 60px; /* Width of the collapsed sidebar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 60px; /* Collapsed sidebar width for smaller screens */
+  }
+}

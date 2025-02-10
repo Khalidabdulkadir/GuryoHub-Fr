@@ -1,0 +1,33 @@
+/* FAQs.css */
+.faqs-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .faqs-section h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .accordion .card {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .accordion .card-header {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .accordion .card-header h5 {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .accordion .card-body {
+    font-size: 1rem;
+    color: #555;
+  }

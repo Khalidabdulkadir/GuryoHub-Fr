@@ -1,0 +1,264 @@
+/* HomeRealEstate.css */
+.home-real-estate {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100vw; /* Full width */
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-between;
+  padding: 10px 20px; /* Add padding to the edges */
+  background-color: #fff;
+  background-color: #2C3E50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+}
+
+.navbar-logo h2{
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Blue color for the logo */
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  color: orangered; /* Keep the orange color for "Som" */
+}
+
+/* Navigation Links */
+.nav-link {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0056b3 !important; /* Darker blue on hover */
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border-color: #3498DB; /* Blue */
+  color: #3498DB; /* Blue */
+}
+
+.btn-outline-primary:hover {
+  background-color: #3498DB; /* Blue */
+  color: #FFFFFF; /* White */
+}
+
+.btn-primary {
+  background-color: #FFA500; /* Orange */
+  border: none;
+  color: #FFFFFF; /* White */
+}
+
+.btn-primary:hover {
+  background-color: #FF8C00; /* Darker Orange */
+}
+
+/* Mobile Navbar */
+.navbar-toggle {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+.listing-card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Optional: Add a slight hover effect */
+}
+/* Mobile-specific styles */
+@media (max-width: 992px) {
+  .navbar-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 60px; /* Height of the navbar */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column; /* Vertical layout for mobile */
+    gap: 10px;
+    background-color: #2C3E50;
+  }
+  .bars{
+    color: #FFFFFF;
+  }
+  .navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default on mobile */
+  }
+
+  .navbar-collapse .navbar-links {
+    display: flex; /* Show links in the dropdown */
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Hero Section */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../../public/images/realestate1");
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limit width for larger screens */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px; /* Limit width for larger screens */
+  margin-bottom: 20px;
+}
+
+.search-bar .form-control {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Filters */
+.search-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%; /* Full width */
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  color: #fff;
+}
+
+.filter-group select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%; /* Full width */
+}
+
+.clear-filters button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-filters button:hover {
+  color: #007bff;
+}
+
+/* Recent Searches */
+.recent-searches {
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Full width */
+}
+
+.recent-searches h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.listing-card .card-title {
+    font-size: 14px;
+  }
+
+  .listing-card .card-text {
+    font-size: 15px;
+  }
+
+  .listing-card .card-body {
+    padding: 10px;
+  }
+
+  .listing-card .card-img-top {
+    height: 120px;
+  }
+  

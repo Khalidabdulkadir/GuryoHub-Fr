@@ -1,0 +1,73 @@
+/* RoomDetails.css */
+
+/* General Styling */
+.room-details-container {
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding-bottom: 50px;
+  }
+  /* Room Details */
+  .room-price {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .room-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .room-location {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Image Carousel */
+  .image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .room-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Contact Card */
+  .contact-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-buttons button {
+    font-size: 16px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-link {
+      font-size: 14px;
+    }
+  
+    .room-price {
+      font-size: 26px;
+    }
+  
+    .room-title {
+      font-size: 20px;
+    }
+  
+    .room-location {
+      font-size: 16px;
+    }
+  }

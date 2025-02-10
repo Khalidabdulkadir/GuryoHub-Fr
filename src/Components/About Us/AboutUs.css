@@ -1,0 +1,75 @@
+.about-us-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #2e7d32;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.images-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-item {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.experience-card {
+  background-color: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.experience-card h3 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.experience-card p {
+  margin: 5px 0 0 0;
+}
+
+.text-section {
+  text-align: left;
+  max-width: 400px;
+}
+
+.text-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.text-section li {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.text-section li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+}

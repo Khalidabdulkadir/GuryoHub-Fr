@@ -1,0 +1,45 @@
+.footer-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .footer-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    padding: 50px 0;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .text-light {
+    color: #d3d3d3 !important;
+  }
+  
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+  
+  .social-icons a:hover {
+    color: #28a745;
+  }
+  
+  .list-unstyled li {
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    max-width: 300px;
+  }
+  
+  .input-group .form-control {
+    border-radius: 0;
+    border-right: none;
+  }
+  
+  .input-group .btn {
+    border-radius: 0;
+  }
+  

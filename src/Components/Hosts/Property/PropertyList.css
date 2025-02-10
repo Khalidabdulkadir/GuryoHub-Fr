@@ -1,0 +1,56 @@
+/* PropertyList.css */
+.property-table {
+  font-size: 0.8rem; /* Smaller font size for the table */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.property-table th,
+.property-table td {
+  padding: 8px; /* Smaller padding for compact rows */
+  vertical-align: middle; /* Align content vertically */
+}
+
+.property-table th {
+  background-color: #007bff; /* Header background color */
+  color: white; /* Header text color */
+}
+
+.property-table tbody tr:hover {
+  background-color: #f8f9fa; /* Hover effect for rows */
+}
+
+.btn-sm {
+  padding: 4px 8px; /* Smaller buttons */
+  font-size: 0.75rem; /* Smaller font size for buttons */
+}
+
+.btn-warning {
+  background-color: #ffc107; /* Yellow color for update button */
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red color for delete button */
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-table {
+    font-size: 0.7rem; /* Even smaller font size for mobile */
+  }
+
+  .btn-sm {
+    padding: 3px 6px; /* Smaller buttons for mobile */
+    font-size: 0.65rem; /* Smaller font size for buttons on mobile */
+  }
+}
