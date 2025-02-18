@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://192.168.0.110:8000/users';
+axios.defaults.baseURL = 'https://api.guryohub.com/users';
 
 let refresh = false;
 

@@ -30,7 +30,7 @@ const Land = () => {
 
       // Fetch land properties from the API
       const response = await axios.get(
-        `http://192.168.0.110:8000/hosts/land-for-sale/?${queryParams}`
+        `https://api.guryohub.com/hosts/land-for-sale/?${queryParams}`
       );
       setProperties(response.data); // Update properties state
     } catch (error) {

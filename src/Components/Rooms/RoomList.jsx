@@ -14,7 +14,7 @@ const Rooms = () => {
 
   const fetchRooms = async () => {
     try {
-      const response = await axios.get("http://192.168.0.110:8000/hosts/rooms/");
+      const response = await axios.get("https://api.guryohub.com/hosts/rooms/");
       setRooms(response.data);
     } catch (error) {
       console.error("Error fetching rooms:", error);
@@ -29,7 +29,7 @@ const Rooms = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://192.168.0.110:8000/hosts/rooms/${editRoom.id}/`, editRoom);
+      await axios.put(`https://api.guryohub.com/hosts/rooms/${editRoom.id}/`, editRoom);
       fetchRooms();
       setIsEditing(false);
       setEditRoom(null);
@@ -45,7 +45,7 @@ const Rooms = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://192.168.0.110:8000/hosts/rooms/${deleteRoomId}/`);
+      await axios.delete(`https://api.guryohub.com/hosts/rooms/${deleteRoomId}/`);
       fetchRooms();
       setShowModal(false);
       setDeleteRoomId(null);

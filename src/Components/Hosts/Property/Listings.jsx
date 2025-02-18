@@ -18,7 +18,7 @@ const PropertyList = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get(`http://192.168.0.110:8000/hosts/properties/?page=${currentPage}`);
+        const response = await axios.get(`https://api.guryohub.com/hosts/properties/?page=${currentPage}`);
         setProperties(response.data.results); // Set the fetched data to state
         setTotalPages(Math.ceil(response.data.count / 12)); // Calculate total pages (12 items per page)
         setLoading(false); // Set loading to false
@@ -35,7 +35,7 @@ const PropertyList = () => {
   // Handle delete property
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://192.168.0.110:8000/hosts/properties/${selectedProperty.id}/`);
+      await axios.delete(`https://api.guryohub.com/hosts/properties/${selectedProperty.id}/`);
       setProperties(properties.filter((property) => property.id !== selectedProperty.id)); // Remove the deleted property from the list
       setShowDeleteModal(false); // Close the delete confirmation modal
     } catch (error) {
@@ -72,7 +72,7 @@ const PropertyList = () => {
     e.preventDefault();
     try {
       const response = await axios.patch(
-        `http://192.168.0.110:8000/hosts/properties/${selectedProperty.id}/`,
+        `https://api.guryohub.com/hosts/properties/${selectedProperty.id}/`,
         selectedProperty
       );
       setProperties(

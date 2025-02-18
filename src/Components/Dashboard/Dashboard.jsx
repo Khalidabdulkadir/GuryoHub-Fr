@@ -51,7 +51,7 @@ const Dashboard = () => {
           return;
         }
         axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        const response = await axios.get("http://192.168.0.110:8000/users/user");
+        const response = await axios.get("https://api.guryohub.com/users/user");
         setUserRole(response.data.user.role);
         dispatch(setAuth(true));
       } catch (error) {
@@ -71,7 +71,7 @@ const Dashboard = () => {
     const fetchStatistics = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.0.110:8000/hosts/properties/statistics/"
+          "https://api.guryohub.com/hosts/properties/statistics/"
         );
         setStatistics(response.data);
         setLoading(false);

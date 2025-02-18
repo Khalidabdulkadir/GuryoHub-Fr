@@ -33,7 +33,7 @@ const ForSale = () => {
 
       // Fetch properties from the API
       const response = await axios.get(
-        `http://192.168.0.110:8000/hosts/for-sale/?${queryParams}`
+        `https://api.guryohub.com/hosts/for-sale/?${queryParams}`
       );
       setProperties(response.data); // Update properties state
     } catch (error) {

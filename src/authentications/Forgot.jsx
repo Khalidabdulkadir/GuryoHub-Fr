@@ -29,7 +29,7 @@ export const Forgot = () => {
                     return;
                 }
                 axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-                await axios.get("http://192.168.0.110:8000/users/user");
+                await axios.get("https://api.guryohub.com/users/user");
                 dispatch(setAuth(true));
             } catch {
                 dispatch(setAuth(false));
@@ -41,7 +41,7 @@ export const Forgot = () => {
     const submit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://192.168.0.110:8000/users/forgot", { email });
+            await axios.post("https://api.guryohub.com/users/forgot", { email });
             setNotify({
                 show: true,
                 error: false,

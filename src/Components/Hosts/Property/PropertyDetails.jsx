@@ -32,7 +32,7 @@ const PropertyDetails = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const response = await axios.get(`http://192.168.0.110:8000/hosts/properties/${id}/`);
+        const response = await axios.get(`https://api.guryohub.com/hosts/properties/${id}/`);
         setProperty(response.data); // Set the fetched data to state
         setLoading(false); // Set loading to false
       } catch (error) {
@@ -49,7 +49,7 @@ const PropertyDetails = () => {
   useEffect(() => {
     const fetchPropertyImages = async () => {
       try {
-        const response = await axios.get(`http://192.168.0.110:8000/hosts/property-images/?property_id=${id}`);
+        const response = await axios.get(`https://api.guryohub.com/hosts/property-images/?property_id=${id}`);
         setImages([{ id: 0, image: property.image }, ...response.data]); // Include the first image
       } catch (error) {
         console.error("Error fetching property images:", error);

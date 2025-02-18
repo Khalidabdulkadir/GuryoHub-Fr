@@ -29,7 +29,7 @@ const HomeRealEstate = () => {
 const fetchProperties = async (page = 1) => {
   setLoading(true);
   try {
-    const response = await axios.get(`http://192.168.0.110:8000/hosts/to-rent/`, {
+    const response = await axios.get(`https://api.guryohub.com/hosts/to-rent/`, {
       params: {
         property_type: propertyType === "Any" ? undefined : propertyType,
         min_price: minPrice === "Any" ? undefined : minPrice,
@@ -88,7 +88,7 @@ const handlePageChange = (page) => {
       url = properties.previous; // Use previous URL from API
     } else {
       // Fallback: Construct URL manually
-      url = `http://192.168.0.110:8000/hosts/to-rent/?page=${page}`;
+      url = `https://api.guryohub.com/hosts/to-rent/?page=${page}`;
     }
 
     axios.get(url)
