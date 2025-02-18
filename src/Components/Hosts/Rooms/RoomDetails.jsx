@@ -30,7 +30,7 @@ const RoomDetails = () => {
   useEffect(() => {
     const fetchRoom = async () => {
       try {
-        const response = await axios.get(`https://api.guryohub.com/hosts/rooms/${id}/`);
+        const response = await axios.get(`api.guryohub.com/hosts/rooms/${id}/`);
         setRoom(response.data); // Set the fetched data to state
         setLoading(false); // Set loading to false
       } catch (error) {

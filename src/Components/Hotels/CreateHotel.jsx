@@ -51,12 +51,12 @@ const CreateHotelWithUser = () => {
             }
 
             // Create Hotel
-            const hotelRes = await axios.post('https://api.guryohub.com/hosts/hotels/', hotel, {
+            const hotelRes = await axios.post('api.guryohub.com/hosts/hotels/', hotel, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
             // Create User
-            const userRes = await axios.post('https://api.guryohub.com/users/register', {
+            const userRes = await axios.post('api.guryohub.com/users/register', {
                 ...user,
                 branch: hotelRes.data.id
             }, {
@@ -64,7 +64,7 @@ const CreateHotelWithUser = () => {
             });
 
             // Link User to Hotel
-            await axios.patch(`https://api.guryohub.com/hosts/hotels/${hotelRes.data.id}/`, {
+            await axios.patch(`api.guryohub.com/hosts/hotels/${hotelRes.data.id}/`, {
                 assigned_user: userRes.data.id
             }, {
                 headers: { Authorization: `Bearer ${token}` }

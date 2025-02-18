@@ -46,7 +46,7 @@ const PropertyForm = () => {
   useEffect(() => {
     const fetchHosts = async () => {
       try {
-        const response = await axios.get("https://api.guryohub.com/hosts/hosts/");
+        const response = await axios.get("api.guryohub.com/hosts/hosts/");
         setHosts(response.data);
       } catch (error) {
         console.error("Error fetching hosts:", error);
@@ -123,7 +123,7 @@ const PropertyForm = () => {
 
     try {
       const response = await axios.post(
-        "https://api.guryohub.com/hosts/properties/",
+        "api.guryohub.com/hosts/properties/",
         formData,
         {
           headers: {
