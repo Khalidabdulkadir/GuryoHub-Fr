@@ -24,7 +24,7 @@ const RoomsListing = () => {
     setLoading(true);
     try {
       // Fetch hotels first
-      const hotelsResponse = await axios.get('api.guryohub.com/hosts/hotels/');
+      const hotelsResponse = await axios.get('https://api.guryohub.com/hosts/hotels/');
       setHotels(hotelsResponse.data);
       // Build room filters
       const queryParams = new URLSearchParams({
@@ -35,7 +35,7 @@ const RoomsListing = () => {
       }).toString();
       // Fetch rooms
       const roomsResponse = await axios.get(
-        `api.guryohub.com/hosts/rooms/?${queryParams}`
+        `https://api.guryohub.com/hosts/rooms/?${queryParams}`
       );
       setRooms(roomsResponse.data);
     } catch (error) {

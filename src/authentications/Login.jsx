@@ -15,7 +15,7 @@ const Login = () => {
     const submit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('api.guryohub.com/users/login', {
+            const { data } = await axios.post('https://api.guryohub.com/users/login', {
                 email,
                 password
             }, { withCredentials: true });
@@ -31,7 +31,7 @@ const Login = () => {
     const fetchUserRole = async () => {
         setLoading(true);
         try {
-            const { data } = await axios.get('api.guryohub.com/users/user');
+            const { data } = await axios.get('https://api.guryohub.com/users/user');
             setUserRole(data.user.role); // Ensure you access the role correctly from the response
             console.log('User role:', data.user.role); // Verify role in console
             setAuthenticated(true); // Set authenticated to true after successful login

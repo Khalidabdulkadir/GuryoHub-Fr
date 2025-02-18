@@ -20,7 +20,7 @@ const UserAccount = () => {
                     return;
                 }
                 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-                const response = await axios.get('api.guryohub.com/users/user');
+                const response = await axios.get('https://api.guryohub.com/users/user');
                 setUserData(response.data.user);
                 dispatch(setAuth(true));
             } catch (error) {

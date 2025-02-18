@@ -11,7 +11,7 @@ const PropertyImageUploadForm = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get("api.guryohub.com/hosts/properties/");
+        const response = await axios.get("https://api.guryohub.com/hosts/properties/");
         setProperties(response.data.results);
       } catch (error) {
         console.error("Error fetching properties:", error);
@@ -48,7 +48,7 @@ const PropertyImageUploadForm = () => {
         formData.append("property", selectedProperty);
         formData.append("image", image); // Use "image" (singular) instead of "images"
   
-        await axios.post("api.guryohub.com/hosts/property-images/", formData, {
+        await axios.post("https://api.guryohub.com/hosts/property-images/", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

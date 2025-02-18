@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = 'api.guryohub.com/users';
+axios.defaults.baseURL = 'https://api.guryohub.com/users';
 
 let refresh = false;
 

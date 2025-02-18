@@ -23,7 +23,7 @@ const Hosts = () => {
   const auth = useSelector((state) => state.auth.value); // Get authentication state from Redux
   const navigate = useNavigate(); // For redirecting unauthenticated users
 
-  const API_URL = 'api.guryohub.com/hosts/hosts/';
+  const API_URL = 'https://api.guryohub.com/hosts/hosts/';
 
   // Fetch all hosts
   const fetchHosts = async () => {
