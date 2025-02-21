@@ -33,7 +33,7 @@ const ForSale = () => {
 
       // Fetch properties from the API
       const response = await axios.get(
-        `https://api.guryohub.com/hosts/for-sale/?${queryParams}`
+        `api.guryohub.com/hosts/for-sale/?${queryParams}`
       );
       setProperties(response.data); // Update properties state
     } catch (error) {
@@ -70,7 +70,7 @@ const ForSale = () => {
   return (
     <div className="home-real-estate">
       {/* Navbar */}
-      <Navbar expand="lg" className="navbar">
+      <Navbar expand="lg" className="navbar" syle={{backgroundColor: "#fff"}}>
   <Container fluid>
     {/* Logo Section */}
     <Navbar.Brand className="col-md-3 mb-2 mb-md-0">

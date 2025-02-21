@@ -15,7 +15,7 @@ const Listings = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get("https://api.guryohub.com/hosts/properties/");
+        const response = await axios.get("api.guryohub.com/hosts/properties/");
         setProperties(response.data); // Set the fetched data to state
         setLoading(false); // Set loading to false
       } catch (error) {

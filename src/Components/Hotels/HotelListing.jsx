@@ -34,7 +34,7 @@ const HotelsList = ({ onHotelSelect }) => {
             }
 
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`; // Add token to headers
-            const response = await axios.get('https://api.guryohub.com/hosts/hotels/');
+            const response = await axios.get('api.guryohub.com/hosts/hotels/');
             setHotels(response.data);
             setLoading(false);
         } catch (err) {
@@ -62,7 +62,7 @@ const HotelsList = ({ onHotelSelect }) => {
             }
 
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`; // Add token to headers
-            await axios.delete(`https://api.guryohub.com/hosts/hotels/${hotelId}/`);
+            await axios.delete(`api.guryohub.com/hosts/hotels/${hotelId}/`);
             setHotels(hotels.filter(hotel => hotel.id !== hotelId));
             setShowDeleteModal(false);
         } catch (err) {
@@ -90,7 +90,7 @@ const HotelsList = ({ onHotelSelect }) => {
             }
 
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`; // Add token to headers
-            const response = await axios.put(`https://api.guryohub.com/hosts/hotels/${selectedHotel.id}/`, hotelDetails);
+            const response = await axios.put(`api.guryohub.com/hosts/hotels/${selectedHotel.id}/`, hotelDetails);
             const updatedHotels = hotels.map(hotel => 
                 hotel.id === selectedHotel.id ? response.data : hotel
             );

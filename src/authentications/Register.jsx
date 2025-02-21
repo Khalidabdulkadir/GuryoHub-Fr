@@ -32,7 +32,7 @@ const Register = () => {
             return;
         }
         try {
-            await axios.post('https://api.guryohub.com/users/register', {
+            await axios.post('api.guryohub.com/users/register', {
                 first_name,
                 last_name,
                 email,
@@ -59,7 +59,7 @@ const Register = () => {
                     return;
                 }
                 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-                const { data } = await axios.get('https://api.guryohub.com/users/user');
+                const { data } = await axios.get('api.guryohub.com/users/user');
                 dispatch(setAuth(true));
             } catch (e) {
                 dispatch(setAuth(false));
@@ -67,7 +67,7 @@ const Register = () => {
         };
         const fetchUserRole = async () => {
             try {
-                const { data } = await axios.get('https://api.guryohub.com/users/user');
+                const { data } = await axios.get('api.guryohub.com/users/user');
                 setUserRole(data.user.role);
             } catch (error) {
                 console.error('Failed to fetch user role:', error);

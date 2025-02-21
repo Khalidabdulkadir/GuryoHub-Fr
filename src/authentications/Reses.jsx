@@ -10,7 +10,7 @@ export const Reset = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        await axios.post("https://api.guryohub.com/users/reset", {
+        await axios.post("api.guryohub.com/users/reset", {
             token,
             password,
             password_confirm: passwordConfirm,

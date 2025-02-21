@@ -21,6 +21,7 @@ import CreateHotel from "./Components/Hotels/CreateHotel";
 import RoomsListing from "./Components/Hosts/Rooms/RoomListing";
 import CreateRoom from "./Components/Rooms/CreateRooms";
 import RoomDetails from "./Components/Hosts/Rooms/RoomDetails";
+import PageNotFound from "./NotFoundPge/PageNotFound";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function AppContent() {
             <Route path="/add-hotel" element={<CreateHotel/>} />
             <Route path="/add-room" element={<CreateRoom/>} />
             <Route path="/register" element={<Register/>} />
+            <Route path="*" element={<PageNotFound/>} />
             </Routes>
             {/* Routes */}
           </div>
