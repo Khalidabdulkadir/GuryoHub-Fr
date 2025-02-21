@@ -20,7 +20,7 @@ const CreateRoom = () => {
     useEffect(() => {
         const fetchHotels = async () => {
             try {
-                const response = await axios.get('api.guryohub.com/hosts/hotels/');
+                const response = await axios.get('https://api.guryohub.com/hosts/hotels/');
                 setHotels(response.data);
             } catch (err) {
                 console.error('Error fetching hotels:', err);
@@ -76,7 +76,7 @@ const CreateRoom = () => {
             }
 
             const response = await axios.post(
-                'api.guryohub.com/hosts/rooms/',
+                'https://api.guryohub.com/hosts/rooms/',
                 formData,
                 {
                     headers: {
