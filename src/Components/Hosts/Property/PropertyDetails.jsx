@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { Container, Row, Col, Button, Card, Navbar, Nav } from "react-bootstrap";
+import { Container, Row, Col, Button, Card, Navbar, Nav, Spinner } from "react-bootstrap";
 import {
   FaPhone,
   FaWhatsapp,
@@ -97,11 +97,16 @@ const PropertyDetails = () => {
     setShowNav(!showNav);
   };
 
-  // Display loading state
+  // Display loading state with spinner
   if (loading) {
     return (
       <Container className="mt-5 text-center">
-        <h2>Loading property details...</h2>
+        <h2>
+          <Spinner animation="border" role="status" variant="primary" className="me-2">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          Loading property details...
+        </h2>
       </Container>
     );
   }
@@ -154,9 +159,9 @@ const PropertyDetails = () => {
                 to="#about-us"
                 className="nav-link px-2"
                 onClick={(e) => {
-                  e.preventDefault(); // Prevent default anchor behavior
-                  setShowNav(false); // Close the mobile navbar (if applicable)
-                  document.getElementById("about-us").scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+                  e.preventDefault();
+                  setShowNav(false);
+                  document.getElementById("about-us").scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 About
@@ -167,7 +172,7 @@ const PropertyDetails = () => {
                 onClick={(e) => {
                   e.preventDefault(); 
                   setShowNav(false);
-                  document.getElementById("contact-us").scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+                  document.getElementById("contact-us").scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 Contact Us
@@ -196,7 +201,6 @@ const PropertyDetails = () => {
           Back
         </Button>
 
-        {/* Breadcrumb */}
         {/* Property Price and Basic Info */}
         <Row className="mb-4">
           <Col>
@@ -248,12 +252,10 @@ const PropertyDetails = () => {
                   <FaBath /> <strong>Bathrooms:</strong> {property.bathrooms}
                 </Card.Text>
                 <Card.Text>
-                  <FaRulerCombined /> <strong>Square Meters:</strong>{" "}
-                  {property.square_meters} m²
+                  <FaRulerCombined /> <strong>Square Meters:</strong> {property.square_meters} m²
                 </Card.Text>
                 <Card.Text>
-                  <strong>Amenities:</strong>{" "}
-                  {property.amenities.join(", ")}
+                  <strong>Amenities:</strong> {property.amenities.join(", ")}
                 </Card.Text>
                 <Card.Text>
                   <strong>Description:</strong> {property.description}
@@ -292,18 +294,10 @@ const PropertyDetails = () => {
                   <strong>Phone:</strong> {property.host.phone}
                 </Card.Text>
                 <div className="contact-buttons">
-                  <Button
-                    variant="primary"
-                    className="w-100 mb-2"
-                    onClick={handlePhoneClick}
-                  >
+                  <Button variant="primary" className="w-100 mb-2" onClick={handlePhoneClick}>
                     <FaPhone /> Contact via Phone
                   </Button>
-                  <Button
-                    variant="success"
-                    className="w-100 mb-2"
-                    onClick={handleWhatsAppClick}
-                  >
+                  <Button variant="success" className="w-100 mb-2" onClick={handleWhatsAppClick}>
                     <FaWhatsapp /> Contact via WhatsApp
                   </Button>
                   <Button variant="info" className="w-100 mb-2">
